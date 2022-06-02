@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start() ?>
 <?php include('includes/header.php') ?>
 <?php include('../includes/session.php') ?>
 <?php $get_id = $_GET['edit']; ?>

@@ -40,6 +40,11 @@
 						<li><a href="heads.php">Manage Heads</a></li>
 					</ul>
 				</li>
+				<li>
+					<a href="teams.php" class="dropdown-toggle no-arrow">
+						<span class="micon dw dw-calendar1"></span><span class="mtext">Teams</span>
+					</a>
+				</li>
 
 
 			</ul>

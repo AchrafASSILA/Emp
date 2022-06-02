@@ -1,3 +1,4 @@
+<?php session_start()?>
 <?php include('includes/header.php') ?>
 <?php include('../includes/session.php') ?>
 <?php
@@ -55,7 +56,7 @@ if (isset($_POST["update_image"])) {
 
 	<?php include('includes/navbar.php') ?>
 
-
+	<?php include('includes/right_sidebar.php') ?>
 
 	<?php include('includes/left_sidebar.php') ?>
 
@@ -87,6 +88,7 @@ if (isset($_POST["update_image"])) {
 
 							<?php $query = mysqli_query($conn, "select * from admin  where emp_id = '$session_id'");
 							$row = mysqli_fetch_array($query);
+							
 							?>
 
 							<div class="profile-photo">

@@ -9,8 +9,9 @@
 
 		<div class="user-info-dropdown">
 			<div class="dropdown">
-
-				<?php $query = mysqli_query($conn, "select * from admin where emp_id = '$session_id'");
+                
+				<?php
+				$query = mysqli_query($conn, "select * from admin where emp_id = '$session_id'");
 				$row = mysqli_fetch_array($query);
 				?>
 

@@ -1,4 +1,5 @@
-<?php include('includes/header.php') ?>
+<?php session_start();
+include('includes/header.php') ?>
 <?php include('../includes/session.php') ?>
 <?php
 if (isset($_GET['delete'])) {
@@ -18,7 +19,7 @@ if (isset($_GET['delete'])) {
 
 	<?php include('includes/navbar.php') ?>
 
-
+	<?php include('includes/right_sidebar.php') ?>
 
 	<?php include('includes/left_sidebar.php') ?>
 

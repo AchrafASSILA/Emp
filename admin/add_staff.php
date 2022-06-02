@@ -1,3 +1,4 @@
+<?php session_start()?>
 <?php
 include('includes/header.php')
 ?>
@@ -49,7 +50,7 @@ if (isset($_POST['add_staff'])) {
 
 	<?php include('includes/navbar.php') ?>
 
-
+	<?php include('includes/right_sidebar.php') ?>
 
 	<?php include('includes/left_sidebar.php') ?>
 

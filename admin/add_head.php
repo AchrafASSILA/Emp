@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include('includes/header.php')
 ?>
 <?php
@@ -50,7 +50,7 @@ if (isset($_POST['add_head'])) {
 
 	<?php include('includes/navbar.php') ?>
 
-
+	<?php include('includes/right_sidebar.php') ?>
 
 	<?php include('includes/left_sidebar.php') ?>
 

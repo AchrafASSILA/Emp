@@ -1,14 +1,18 @@
+<?php session_start()?>
+<?php if(isset($_SESSION['alogin'])):?>
 <?php include('includes/header.php') ?>
-<?php include('../includes/session.php') ?>
+<?php
+include('../includes/session.php') 
+?>
 
 <body>
 
-
 	<?php include('includes/navbar.php') ?>
 
-
+	<?php include('includes/right_sidebar.php') ?>
 
 	<?php include('includes/left_sidebar.php') ?>
+    
 
 	<div class="mobile-menu-overlay"></div>
 
@@ -116,3 +120,6 @@
 </body>
 
 </html>
+<?php else:?>
+<?php header('Location: ../index.php');?>
+<?php endif;?>

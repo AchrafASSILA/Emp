@@ -1,3 +1,4 @@
+<?php session_start()?>
 <?php include('includes/header.php') ?>
 <?php include('../includes/session.php') ?>
 <?php $get_id = $_GET['edit']; ?>
@@ -32,7 +33,7 @@ if (isset($_POST['edit'])) {
 
 	<?php include('includes/navbar.php') ?>
 
-
+	<?php include('includes/right_sidebar.php') ?>
 
 	<?php include('includes/left_sidebar.php') ?>
 

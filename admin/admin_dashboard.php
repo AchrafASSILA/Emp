@@ -122,7 +122,7 @@
 	</html>
 <?php else : ?>
 
-	<script >
+	<script>
 		window.location = '../index.php';
 	</script>
 <?php endif; ?>

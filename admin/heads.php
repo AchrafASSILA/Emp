@@ -113,11 +113,11 @@
 					</div>
 				</div>
 				<style>
-.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+					.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
 						background: none;
 						border: none;
 					}
-									</style>
+				</style>
 				<div class="card-box mb-30">
 					<div class="pd-20">
 						<h2 class="text-blue h4">ALL EMPLOYEES</h2>
@@ -191,7 +191,7 @@
 
 	</html>
 <?php else : ?>
-<script >
+	<script>
 		window.location = '../index.php';
 	</script>
 <?php endif; ?>

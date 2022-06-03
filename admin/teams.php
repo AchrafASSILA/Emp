@@ -74,7 +74,7 @@
 
     </html>
 <?php else : ?>
-<script >
-		window.location = '../index.php';
-	</script>
+    <script>
+        window.location = '../index.php';
+    </script>
 <?php endif; ?>

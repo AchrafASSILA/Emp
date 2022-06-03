@@ -88,7 +88,7 @@
 						<div class="card-box height-100-p widget-style3">
 
 							<?php
-							$query_reg_hod = mysqli_query($conn, "select * from tblemployees where role = 'HOD' ");
+							$query_reg_hod = mysqli_query($conn, "select * from tblemployees where role = 'Head' ");
 							$count_reg_hod = mysqli_num_rows($query_reg_hod);
 							?>
 
@@ -107,7 +107,7 @@
 						<div class="card-box height-100-p widget-style3">
 
 							<?php
-							$query_reg_admin = mysqli_query($conn, "select * from tblemployees where role = 'Admin' ");
+							$query_reg_admin = mysqli_query($conn, "select * from admin");
 							$count_reg_admin = mysqli_num_rows($query_reg_admin);
 							?>
 
@@ -123,13 +123,18 @@
 						</div>
 					</div>
 				</div>
-
+				<style>
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+						background: none;
+						border: none;
+					}
+									</style>
 				<div class="card-box mb-30">
 					<div class="pd-20">
 						<h2 class="text-blue h4">ALL EMPLOYEES</h2>
 					</div>
 					<div class="pb-20">
-						<table class="data-table table stripe hover nowrap">
+						<table class="data-table table stripe hover nowrap" id="table_id">
 							<thead>
 								<tr>
 									<th class="table-plus">FULL NAME</th>
@@ -137,7 +142,7 @@
 									<th>DEPARTMENT</th>
 									<th>POSITION</th>
 									<th>SALARY</th>
-									<th>START JOB DATE</th>
+									<th>START JOB</th>
 									<th class="datatable-nosort">ACTION</th>
 								</tr>
 							</thead>
@@ -196,5 +201,7 @@
 
 	</html>
 <?php else : ?>
-	<?php header('Location: ../index.php'); ?>
+<script >
+		window.location = '../index.php';
+	</script>
 <?php endif; ?>

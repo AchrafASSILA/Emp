@@ -33,7 +33,7 @@
 			</script>
 		<?php
 		} else {
-			mysqli_query($conn, "INSERT INTO tblemployees(FirstName,LastName,EmailId,Gender,Dob,Department,Address,role,Phonenumber,Status, location,salary,start_job) VALUES('$fname','$lname','$email','$gender','$dob','$department','$address','Staff','$phonenumber','$status', 'NO-IMAGE-AVAILABLE.jpg','$salary','$strt')         
+			mysqli_query($conn, "INSERT INTO tblemployees(FirstName,LastName,EmailId,Gender,Dob,Department,Address,role,Phonenumber,Status, location,salary,start_job) VALUES('$fname','$lname','$email','$gender','$dob','$department','$address','Head','$phonenumber','$status', 'NO-IMAGE-AVAILABLE.jpg','$salary','$strt')         
 		"); ?>
 			<script>
 				alert('Staff Records Successfully  Added');
@@ -204,5 +204,7 @@
 
 	</html>
 <?php else : ?>
-	<?php header('Location: ../index.php'); ?>
+<script >
+		window.location = '../index.php';
+	</script>
 <?php endif; ?>

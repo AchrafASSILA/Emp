@@ -1,4 +1,4 @@
-<script src="../vendors/scripts/core.js"></script>
+    <script src="../vendors/scripts/core.js"></script>
 	<script src="../vendors/scripts/script.min.js"></script>
 	<script src="../vendors/scripts/process.js"></script>
 	<script src="../vendors/scripts/layout-settings.js"></script>
@@ -15,8 +15,16 @@
 	<script src="../src/plugins/datatables/js/buttons.flash.min.js"></script>
 	<script src="../src/plugins/datatables/js/pdfmake.min.js"></script>
 	<script src="../src/plugins/datatables/js/vfs_fonts.js"></script>
-	
-
+	<script>
+	$(document).ready(function() {
+		$('#table_id').DataTable();
+	});
+</script>
+<style>
+    .disclaimer{
+        display:none;
+    }
+</style>
 	
 	
 

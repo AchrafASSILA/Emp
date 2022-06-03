@@ -37,10 +37,9 @@
 		"); ?>
 			<script>
 				alert('Staff Records Successfully  Added');
+				document.location = "staff.php";
 			</script>;
-			<script>
-				window.location = "staff.php";
-			</script>
+
 	<?php   }
 	}
 
@@ -204,5 +203,7 @@
 
 	</html>
 <?php else : ?>
-	<?php header('Location: ../index.php'); ?>
+<script >
+		window.location = '../index.php';
+	</script>
 <?php endif; ?>

@@ -112,13 +112,18 @@
 						</div>
 					</div>
 				</div>
-
+				<style>
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+						background: none;
+						border: none;
+					}
+									</style>
 				<div class="card-box mb-30">
 					<div class="pd-20">
-						<h2 class="text-blue h4">ALL HEADS</h2>
+						<h2 class="text-blue h4">ALL EMPLOYEES</h2>
 					</div>
 					<div class="pb-20">
-						<table class="data-table table stripe hover nowrap">
+						<table class="data-table table stripe hover nowrap" id="table_id">
 							<thead>
 								<tr>
 									<th class="table-plus">FULL NAME</th>
@@ -186,5 +191,7 @@
 
 	</html>
 <?php else : ?>
-	<?php header('Location: ../index.php'); ?>
+<script >
+		window.location = '../index.php';
+	</script>
 <?php endif; ?>

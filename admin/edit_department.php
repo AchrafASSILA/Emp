@@ -153,5 +153,7 @@
 
 	</html>
 <?php else : ?>
-	<?php header('Location: ../index.php'); ?>
+<script >
+		window.location = '../index.php';
+	</script>
 <?php endif; ?>

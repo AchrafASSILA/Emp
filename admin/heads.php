@@ -122,7 +122,7 @@
 					<div class="pd-20">
 						<h2 class="text-blue h4">ALL EMPLOYEES</h2>
 					</div>
-					<div class="pb-20">
+					<div class="pb-20" style="overflow-x: auto;">
 						<table class="data-table table stripe hover nowrap" id="table_id">
 							<thead>
 								<tr>
@@ -133,6 +133,7 @@
 
 									<th>SALARY</th>
 									<th>START JOB DATE</th>
+									<th>VIEW</th>
 									<th class="datatable-nosort">ACTION</th>
 								</tr>
 							</thead>
@@ -157,11 +158,68 @@
 													</div>
 												</div>
 											</td>
+
 											<td><?php echo $row['EmailId']; ?></td>
 											<td><?php echo $row['DepartmentName']; ?></td>
 											<td><?php echo $row['role']; ?></td>
 											<td><?php echo $row['salary'] ? $row['salary'] : 'null'; ?> Dh</td>
 											<td><?php echo $row['start_job'] ? $row['start_job'] : 'null'; ?> </td>
+											<td><button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#<?php echo $row['FirstName'] ?>">
+													<i class="dw dw-eye"></i>
+
+												</button>
+												<div class="modal fade" id="<?php echo $row['FirstName'] ?>" tabindex="-1" aria-labelledby="<?php echo $row['FirstName'] ?>Label" aria-hidden="true">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="<?php echo $row['FirstName'] ?>">Employee Informations</h5>
+																<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+															</div>
+															<div class="modal-body">
+																<h5 class="mb-20 h5 text-blue">Employee Information</h5>
+																<ul>
+																	<li>
+																		<span class="text-blue">Full Name:</span>
+																		<?php echo $row['FirstName'] . ' ' . $row['LastName']; ?>
+																	</li>
+																	<li>
+																		<span class="text-blue">Address Mail:</span>
+																		<?php echo $row['EmailId']; ?>
+																	</li>
+																	<li>
+																		<span class="text-blue">Department Name:</span>
+																		<?php echo $row['DepartmentName']; ?>
+																	</li>
+																	<li>
+																		<span class="text-blue">Start Job:</span>
+																		<?php echo $row['start_job']; ?>
+																	</li>
+																	<li>
+																		<span class="text-blue">Phone Number:</span>
+																		<?php echo $row['Phonenumber']; ?>
+																	</li>
+																	<li>
+																		<span class="text-blue">Date Of Birth:</span>
+																		<?php echo $row['Dob']; ?>
+																	</li>
+																	<li>
+																		<span class="text-blue">Salary:</span>
+																		<?php echo $row['salary']; ?>Dh
+																	</li>
+
+																	<li>
+																		<span class="text-blue">Address:</span>
+																		<?php echo $row['Address']; ?>
+																	</li>
+																</ul>
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</td>
 											<td>
 												<div class="dropdown">
 													<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">

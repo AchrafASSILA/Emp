@@ -13,6 +13,7 @@
 		}
 	}
 
+
 	?>
 
 	<body>
@@ -257,6 +258,9 @@
 									} ?>
 							</tbody>
 						</table>
+						<form method="POST" style="text-align: center;" action="./export-to-excel.php">
+							<input type="submit" name="export_staffs" class="btn btn-success" value="download excel">
+						</form>
 					</div>
 				</div>
 

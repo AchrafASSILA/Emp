@@ -236,9 +236,11 @@
 									} ?>
 							</tbody>
 						</table>
+						<form method="POST" style="text-align: center;" action="./export-to-excel.php">
+							<input type="submit" name="export_heads" class="btn btn-success" value="download excel">
+						</form>
 					</div>
 				</div>
-
 				<?php include('includes/footer.php'); ?>
 			</div>
 		</div>

@@ -16,10 +16,13 @@
 		$dob = $_POST['dob'];
 		$department = $_POST['department'];
 		$address = $_POST['address'];
+
+
 		$phonenumber = $_POST['phonenumber'];
 		$salary = $_POST['salary'];
 		$strt = $_POST['strt'];
 		$status = 1;
+
 		$query = mysqli_query($conn, "select * from tblemployees where EmailId = '$email'");
 		$count = mysqli_num_rows($query);
 
@@ -42,7 +45,17 @@
 	?>
 
 	<body>
-
+		<div class="pre-loader">
+			<div class="pre-loader-box">
+				<div class='loader-progress' id="progress_div">
+					<div style="background-color: #03a9f4;" class='bar' id='bar1'></div>
+				</div>
+				<div class='percent' id='percent1'>0%</div>
+				<div class="loading-text">
+					Loading...
+				</div>
+			</div>
+		</div>
 
 		<?php include('includes/navbar.php') ?>
 

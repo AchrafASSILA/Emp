@@ -1,30 +1,6 @@
 <?php
 session_start();
 include('includes/config.php');
-if (isset($_POST['signin'])) {
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-
-	$sql = "SELECT * FROM admin where UserName ='$username' AND Password='$password' ";
-	$query = mysqli_query($conn, $sql);
-	$count = mysqli_num_rows($query);
-	echo ($count);
-	// echo ($count);
-	if ($count > 0) {
-		while ($row = mysqli_fetch_assoc($query)) {
-
-			$_SESSION['alogin'] = $row['emp_id'];
-
-			echo "<script type='text/javascript'> document.location = 'admin/admin_dashboard.php'; </script>";
-		}
-	} else {
-
-		echo "<script>alert('Invalid Details');</script>";
-	}
-}
-
-// $_SESSION['alogin']=$_POST['username'];
-// 	echo "<script type='text/javascript'> document.location = 'changepassword.php'; </script>";
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +23,8 @@ if (isset($_POST['signin'])) {
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -104,3 +82,34 @@ if (isset($_POST['signin'])) {
 </body>
 
 </html>
+<?php
+if (isset($_POST['signin'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
+	$sql = "SELECT * FROM admin where UserName ='$username' AND Password='$password' ";
+	$query = mysqli_query($conn, $sql);
+	$count = mysqli_num_rows($query);
+
+	if ($count > 0) :
+		while ($row = mysqli_fetch_assoc($query)) {
+
+			$_SESSION['alogin'] = $row['emp_id'];
+
+			echo "<script type='text/javascript'> document.location = 'admin/admin_dashboard.php'; </script>";
+		}
+	else : ?>
+		<style>
+			.swal2-popup .swal2-styled.swal2-confirm {
+				background-color: #03a9f4;
+			}
+		</style>
+		<script>
+			Swal.fire('Invalid Details')
+		</script>;
+<?php
+	endif;
+}
+
+
+?>

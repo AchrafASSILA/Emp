@@ -13,22 +13,20 @@
 		}
 	}
 
-
 	?>
 
 	<body>
-		<!-- <div class="pre-loader">
-		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="../vendors/images/deskapp-logo-svg.png" alt=""></div>
-			<div class='loader-progress' id="progress_div">
-				<div class='bar' id='bar1'></div>
-			</div>
-			<div class='percent' id='percent1'>0%</div>
-			<div class="loading-text">
-				Loading...
+		<div class="pre-loader">
+			<div class="pre-loader-box">
+				<div class='loader-progress' id="progress_div">
+					<div style="background-color: #03a9f4;" class='bar' id='bar1'></div>
+				</div>
+				<div class='percent' id='percent1'>0%</div>
+				<div class="loading-text">
+					Loading...
+				</div>
 			</div>
 		</div>
-	</div> -->
 
 		<?php include('includes/navbar.php') ?>
 
@@ -167,7 +165,7 @@
 									?>
 
 											<td class="table-plus">
-												<div class="name-avatar d-flex align-items-center">
+												<div class="name-avatar d-flex align-items-center" style="margin-right: 40px;">
 													<div class="avatar mr-2 flex-shrink-0">
 														<img style="width: 40px;
     height: 40px;" src="<?php echo (!empty($row['location'])) ? '../uploads/' . $row['location'] : '../uploads/NO-IMAGE-AVAILABLE.jpg'; ?>" class="border-radius-100 shadow" width="40" height="40" alt="">
@@ -246,7 +244,7 @@
 													</a>
 													<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
 														<a class="dropdown-item" href="edit_staff.php?edit=<?php echo $row['emp_id']; ?>"><i class="dw dw-edit2"></i> Edit</a>
-														<a class="dropdown-item" href="staff.php?delete=<?php echo $row['emp_id'] ?>"><i class="dw dw-delete-3"></i> Delete</a>
+														<a class="dropdown-item" onclick="return confirm('Are you sure you want to delete this employee?');" href="staff.php?delete=<?php echo $row['emp_id'] ?>"><i class="dw dw-delete-3"></i> Delete</a>
 
 													</div>
 												</div>

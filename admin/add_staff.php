@@ -12,18 +12,14 @@
 		$fname = $_POST['firstname'];
 		$lname = $_POST['lastname'];
 		$email = $_POST['email'];
-		$password = md5($_POST['password']);
 		$gender = $_POST['gender'];
 		$dob = $_POST['dob'];
 		$department = $_POST['department'];
 		$address = $_POST['address'];
-
-
 		$phonenumber = $_POST['phonenumber'];
 		$salary = $_POST['salary'];
 		$strt = $_POST['strt'];
 		$status = 1;
-
 		$query = mysqli_query($conn, "select * from tblemployees where EmailId = '$email'");
 		$count = mysqli_num_rows($query);
 

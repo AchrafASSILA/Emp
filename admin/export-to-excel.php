@@ -4,7 +4,7 @@ $output = '';
 
 
 $output .= '
-<table class="table" bordered="1">
+<table class="table" border="1">
 <tr>
 <th>Full Name</th>
 <th>Address Mail</th>

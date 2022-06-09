@@ -55,7 +55,7 @@
 
 							<div class="d-flex flex-wrap">
 								<div class="widget-data">
-									<div class="weight-700 font-24 text-dark"><?php echo ($empcount); ?></div>
+									<div class="weight-700 font-24 text-dark"><?php echo ($empcount) + 1; ?></div>
 									<div class="font-14 text-secondary weight-500">Total Employees</div>
 								</div>
 								<div class="widget-icon">
